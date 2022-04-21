@@ -65,7 +65,7 @@ Zstandard \footnote{https://facebook.github.io/zstd/} is a lossless compression 
 We decided to run the same experiments using Zstandard and compared the results against other compression algorithms and strategies.
 However, TensorFlow's \texttt{TFRecord} only supports GZIP and ZLIB.
 As part of our work, we created a custom TensorFlow implementation to include the lossless compression algorithm Zstandard.
-Our analysis reveals that Zstandard decreases compression and decompression overhead times by up to $0.81\%$ compared to GZIP and ZLIB in all scenarios.
+Our analysis reveals that Zstandard decreases compression and decompression overhead times by up to $81\%$ compared to GZIP and ZLIB in all scenarios.
 
 In this paper, we argue that the selection of a compression algorithm is crucial to minimize compression and decompression overhead and potentially maximize throughput.
 We further analyze the challenges arising from the implementation of compression in deep learning preprocessing pipelines.
@@ -330,14 +330,14 @@ However, we don't have specific data about these metrics, so more testing is nee
   
   % commonvoice
   \begin{subfigure}{0.49 \columnwidth}
-    \includegraphics[width=\linewidth]{../images/commonvoice-pipeline/strategy-compressed-storage-vs-throughput.pdf}
+    \includegraphics[width=\linewidth]{../images/commonvoice-strategy/compressed-storage-vs-throughput.pdf}
     \caption{Commonvoice}
     \Description{}
     \label{fig:zlib-strategy-commonvoice-compressed-storage-vs-throughput}
   \end{subfigure}
   \hfill %%
   \begin{subfigure}{0.49 \columnwidth}
-    \includegraphics[width=\linewidth]{../images/commonvoice-pipeline/strategy-compression-processing-time-split.pdf}
+    \includegraphics[width=\linewidth]{../images/commonvoice-strategy/compression-processing-time-split.pdf}
     \caption{Commonvoice}
     \Description{}
     \label{fig:zlib-strategy-commonvoice-compression-processing-time-split}
